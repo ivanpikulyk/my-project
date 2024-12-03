@@ -71,6 +71,19 @@ jobs:
       with:
         java-version: '11'
         distribution: 'temurin'
+    -
+      name: Login to Docker Hub
+      uses: docker/login-action@v3
+      with:
+        username: ${{ vars.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_TOKEN }}
+    -
+      name: Build and push
+      uses: docker/build-push-action@v6
+      with:
+        context: .
+        push: true
+        tags: ivanpikulyk/my-images-repo:gradlejavagithubaction
 
     
 
