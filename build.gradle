@@ -9,6 +9,8 @@ version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8
 
+apply plugin: 'maven-publish'
+
 tasks.named('jar') { doLast { archiveFileName = "my-app-${version}.jar" destinationDirectory.set(file("build/libs")) }
 
 repositories {
