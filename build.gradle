@@ -9,7 +9,7 @@ version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8
 
-tasks.named('jar') { archiveBaseName.set("my-app") archiveVersion.set(project.version) destinationDirectory.set(file("build/libs"))
+tasks.named('jar') { doLast { archiveFileName = "my-app-${version}.jar" destinationDirectory.set(file("build/libs")) }
 
 repositories {
     mavenCentral()
