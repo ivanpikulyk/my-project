@@ -31,7 +31,8 @@ jobs:
     - name: Build and Push Docker Image
       uses: mr-smithers-excellent/docker-build-push@v4
       with:
-        image: ivanpikulyk/my-images-repo:gjaction
+        image: ivanpikulyk/my-images-repo
+        tag: gjaction
         registry: docker.io
         username: ${{ vars.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
