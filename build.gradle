@@ -9,7 +9,7 @@ version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8
 
-jar { archiveBaseName = "my-app-$version" archiveVersion = "project.version" destinationDirectory = file("build/libs") }
+jar { archiveBaseName = "my-app-$version" archiveVersion = project.version destinationDirectory = file("build/libs") }
 
 repositories {
     mavenCentral()
