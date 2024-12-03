@@ -11,7 +11,7 @@ sourceCompatibility = 1.8
 
 apply plugin: 'maven-publish'
 
-tasks.named('jar') { doLast { archiveFileName = "my-app-${version}.jar" destinationDirectory.set(file("build/libs")) }
+jar { doLast { destinationDirectory.set(file("build/libs")) archiveFileName.set("my-app-${version}.jar") } }
 
 repositories {
     mavenCentral()
