@@ -1,3 +1,5 @@
+#This repo is only a copy for educational purposes and all credits for owner of original repo - https://github.com/nanuchi/my-project
+
 ##### build the project
 
     ./gradlew build
