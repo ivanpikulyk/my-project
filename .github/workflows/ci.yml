@@ -27,6 +27,13 @@ jobs:
 
     - name: Build with Gradle
       run: ./gradlew build
+    
+    - name: Upload Artifact 
+      uses: actions/upload-artifact@v2 
+      with: 
+        name: my-artifact 
+        path: build/libs/*.jar 
+        retention-days: 1
 
     - name: Build and Push Docker Image
       uses: mr-smithers-excellent/docker-build-push@v4
